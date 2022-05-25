@@ -1,0 +1,379 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Colors */
+    /* Primary */
+    --blue: hsl(212, 100%, 50%);
+    --white: hsl(0, 0%, 100%);
+    --red: hsl(0, 91%, 62%);
+
+    /* Light Mode */
+    --grayish-blue: hsl(217, 20%, 51%);
+    --desautareted-blue: hsl(217, 35%, 45%);
+    --dark-blue: hsl(217, 21%, 21%);
+    --saturated-white: hsl(227, 100%, 98%);
+
+    /* Dark Mode */
+    --very-dark-blue: hsl(220, 40%, 13%);
+    --dark-desaturated-blue: hsl(222, 41%, 20%);
+
+    /* Hover */
+    --hover-blue: hsl(212, 100%, 69%);
+
+    /* Shadow */
+    --sh-box: 0px 16px 30px -10px rgba(70, 96, 187, 0.1986);
+}
+
+body {
+    background-color: var(--very-dark-blue);
+    display: grid;
+    place-content: center;
+    font-family: "Space Mono", monospace;
+    min-height: 100vh;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.5s;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* SECTION ONE */
+
+.section_one {
+    display: flex;
+    padding: 0px 22px 0 10px;
+    margin: 15px 0px 0px 0px;
+    justify-content: space-between;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.5s;
+}
+
+.header {
+    color: var(--white);
+    font-size: 28px;
+    letter-spacing: 1px;
+}
+
+.mode_container {
+
+    width: 96px;
+    height: 33px;
+}
+
+.light_contaner {
+    display: flex;
+    gap: 11px;
+    align-items: center;
+    cursor: pointer;
+    position: absolute;
+    transition-timing-function: linear;
+    transition-duration: 2s;
+
+}
+
+.dark_container {
+    display: flex;
+    gap: 11px;
+    align-items: center;
+    cursor: pointer;
+    opacity: 0;
+    z-index: -1;
+    transition-timing-function: ease-in-out;
+    transition-duration: 2s;
+}
+
+
+.mode {
+    color: var(--white);
+    font-size: 15px;
+    letter-spacing: 2px;
+}
+
+.darkmode {
+    color: var(--grayish-blue);
+    font-size: 15px;
+    letter-spacing: 2px;
+}
+
+
+.moon_icon {
+    fill: var(--grayish-blue);
+}
+
+
+
+
+/* SECTION TWO*/
+
+.section_two {
+    display: flex;
+    align-items: center;
+    background-color: var(--dark-desaturated-blue);
+    border-radius: 12px;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.4s;
+}
+
+.search_icon {
+    margin-right: 18px;
+    padding: 0 0 0px 14px;
+}
+
+.searchbar {
+    height: 24px;
+    flex-grow: 1;
+    border-radius: 7px;
+    margin: 10px 0px 10px 0px;
+    background-color: var(--dark-desaturated-blue);
+    border-color: var(--dark-desaturated-blue);
+    border-style: solid;
+    border-width: 2px;
+    padding: 20px 0px 20px 16px;
+    color: var(--white);
+    font-family: "Space Mono", monospace;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.4s;
+}
+
+input:focus {
+    outline: none;
+    border: 2px solid rgb(135, 136, 160);
+}
+
+::placeholder {
+    font-family: "Space Mono", monospace;
+    color: white;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+.btn {
+    margin-left: 10px;
+    border: none;
+    background-color: var(--blue);
+    margin-right: 10px;
+    color: hsl(0deg 0% 100%);
+    font-family: "Space Mono";
+    font-size: 14px;
+    padding: 14px 19px 14px 19px;
+    border-radius: 10px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    cursor: pointer;
+    opacity: 1;
+}
+
+button:hover {
+    background-color: hsl(212deg 84% 66%);
+}
+
+/* SECTION THREE*/
+
+.section_three {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    padding: 40px 56px 51px 42px;
+    background-color: var(--dark-desaturated-blue);
+    border-radius: 12px;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.5s;
+}
+
+.profilepic {
+    border-radius: 50%;
+    width: 141px;
+}
+
+.name_and_joined_date_container {
+    display: flex;
+}
+
+.user_fullname {
+    color: var(--white);
+    font-size: 24px;
+}
+
+.username {
+    color: var(--blue);
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.date {
+    color: var(--saturated-white);
+}
+
+.bio {
+    margin: 23px 0px 0px;
+    width: 19em;
+    min-height: 42px;
+    color: var(--saturated-white);
+}
+
+.followers_and_repo_container {
+    background-color: var(--very-dark-blue);
+    margin: 24px 0px 22px 0px;
+    padding: 18px 3px 18px 3px;
+    border-radius: 12px;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.5s;
+}
+
+.tabelhead {
+    color: var(--white);
+
+}
+
+table {
+    width: 100%;
+    line-height: 1.8;
+    letter-spacing: 1px;
+}
+
+tr {
+    text-align: center;
+    color: var(--saturated-white);
+}
+
+.user_about_container {
+    display: flex;
+    gap: 45px;
+    color: var(--saturated-white);
+    justify-content: space-around;
+}
+
+.location_twitter_container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.location_container {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.twitter_contanier {
+    display: flex;
+    gap: 11px;
+    align-items: center;
+}
+
+
+.twitter_icon {
+    fill: var(--saturated-white);
+}
+
+.location_icon {
+    fill: var(--saturated-white);
+}
+
+
+.twitterlink {
+    text-decoration: none;
+    color: var(--saturated-white);
+}
+
+.blog_icon {
+    fill: var(--saturated-white);
+}
+
+.git_icon {
+    fill: var(--saturated-white);
+}
+
+.blog_and_github_container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.blog_container {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.blog {
+    text-decoration: none;
+    color: var(--saturated-white);
+}
+
+.github_container {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.git {
+    text-decoration: none;
+    color: var(--saturated-white);
+}
+
+
+/* DARK MODE */
+
+.bodylight {
+    background-color: hsl(227, 100%, 98%);
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.4s;
+}
+
+
+.lightmodeNameDeactive {
+    opacity: 0;
+    z-index: -1;
+
+}
+
+.darkmodeNameActive {
+    opacity: 1;
+    z-index: 3;
+
+}
+
+.headerlight {
+    color: var(--very-dark-blue);
+    font-weight: 700;
+}
+
+.whitecolor {
+    background-color: var(--white);
+    box-shadow: var(--sh-box)
+}
+
+.barcolor {
+    background-color: var(--white);
+    border-color: var(--white);
+    color: var(--very-dark-blue);
+    letter-spacing: 1px;
+    font-size: 19px;
+
+}
+
+
+.placeholdercolor::placeholder {
+    color: var(--grayish-blue);
+}
+
+.grayishcolor {
+    color: var(--grayish-blue);
+}
+
+
+.iconColor {
+    fill: var(--desautareted-blue);
+}
+
+.textcolor {
+    color: var(--desautareted-blue);
+}
