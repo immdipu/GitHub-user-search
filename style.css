@@ -86,7 +86,7 @@ body {
     cursor: pointer;
     position: absolute;
     transition-timing-function: linear;
-    transition-duration: 2s;
+    transition-duration: 1s;
 }
 
 .dark_container {
@@ -97,7 +97,7 @@ body {
     opacity: 0;
     z-index: -1;
     transition-timing-function: ease-in-out;
-    transition-duration: 2s;
+    transition-duration: 1s;
 }
 
 .mode {
