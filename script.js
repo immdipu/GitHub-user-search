@@ -261,7 +261,6 @@ searchBar.addEventListener("click", function () {
 
 searchBtn.addEventListener("click", function () {
     if (searchBar.value === "") {
-        console.log("hello");
         Error.classList.add("active");
     } else {
         fetchData();
